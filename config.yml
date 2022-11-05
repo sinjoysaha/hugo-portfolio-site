@@ -1,0 +1,66 @@
+baseURL: ""
+languageCode: en-us
+title: Sinjoy Saha
+theme: PaperMod
+
+params:
+  cover: 
+    linkFullImages: true
+    responsiveImages: true
+    hiddenInList: false
+
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowSharebuttons: false
+  ShowPostNavLinks: true
+
+  # profile-mode
+  profileMode:
+    enabled: true # needs to be explicitly set
+    title: Sinjoy Saha
+    subtitle: "Computer Vision, Data Science, NLP"
+    imageUrl: "images/profilePic.jpg"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Blog
+        url: blog
+      - name: Projects
+        url: projects
+
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: Welcome to my website.
+
+  socialIcons:
+    - name: twitter
+      url: "https://twitter.com/SinjoySaha/"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/sinjoysaha/"
+    - name: github
+      url: "https://github.com/sinjoysaha/"
+
+menu:
+  main:
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 10
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 50
