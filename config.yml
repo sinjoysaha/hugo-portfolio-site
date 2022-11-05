@@ -1,9 +1,15 @@
-baseURL: ""
+baseURL: "https://sinjoysaha.github.io/"
 languageCode: en-us
 title: Sinjoy Saha
 theme: PaperMod
 
+canonifyURLs: true
+
 params:
+  # env: production 
+  # assets:
+  #   disableFingerprinting: true
+
   cover: 
     linkFullImages: true
     responsiveImages: true
@@ -25,9 +31,9 @@ params:
     imageTitle: my image
     buttons:
       - name: Blog
-        url: blog
+        url: blog/
       - name: Projects
-        url: projects
+        url: projects/
 
   # home-info mode
   homeInfoParams:
