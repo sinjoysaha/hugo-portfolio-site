@@ -7,6 +7,9 @@ canonifyURLs: true
 
 params:
   # env: production 
+  author: Sinjoy Saha
+  description: Sinjoy's Portfolio Site
+
   # assets:
   #   disableFingerprinting: true
 
@@ -19,6 +22,8 @@ params:
   ShowBreadCrumbs: true
   ShowSharebuttons: false
   ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  showtoc: true
 
   # profile-mode
   profileMode:
@@ -47,6 +52,10 @@ params:
       url: "https://www.linkedin.com/in/sinjoysaha/"
     - name: github
       url: "https://github.com/sinjoysaha/"
+    - name: hackerrank
+      url: "https://www.hackerrank.com/sinjoysaha"
+    - name: leetcode
+      url: "https://leetcode.com/sinjoysaha/"
 
 menu:
   main:

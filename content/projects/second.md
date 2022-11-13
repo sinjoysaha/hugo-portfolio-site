@@ -1,7 +1,7 @@
 ---
 title: "Second Project"
 date: 2022-11-05T19:53:00+05:30
-draft: false
+draft: true
 cover: 
     image: projects/images/download.jpeg
     alt: 'This is the cover image for second project.'
