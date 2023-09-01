@@ -170,18 +170,32 @@ disable404 = true
         title = "Internships"
 
         [[params.internships.list]]
-        position = "under Samik Basu, Soumya Pandit, Soma Barman (Mandal)"
-        dates = "May. - Jul., 2018"
-        company = "Summer Project on Smart Health Monitoring System"
-        location = "IRPE, CU"
-        details = "- A smart IoT-based health monitoring system was implemented which uses noninvasive sensors to read health parameters, displays it on an LCD and sends the data to the cloud to store it securely.\n- Implemented using Arduino UNO, different sensors, Wi-Fi module and Thingspeak IoT platform."
+        position = "under Dr. Rituparna Saha, Prof. Sudip Misra, IIT Kgp"
+        dates = "Jul. - Dec., 2021"
+        company = "Research Internship"
+        location = "Sensordrops Networks Pvt. Ltd, IIT Kharagpur"
+        details = "- Introduced a novel algorithm for Federated Learning in non-IID datasets based on K-Means clustering of clients. Our algorithm surpassed the accuracy of Federated Averaging (FedAvg) on non-IID MNIST dataset.\n- The work motivated a journal paper which is currently under review."
+
+        [[params.internships.list]]
+        position = "under Dr. Sruti Das Choudhary, Prof. Ashok Samal, UNL"
+        dates = "Jul. - Dec., 2021"
+        company = "Research Internship"
+        location = "Plant Vision Lab, University of Nebraska, Lincoln"
+        details = "- Temporal propagation of stress in drought affected cotton plants based on hyperspectral images capturing the growth of plants. Analysis of the reflection coefficients is performed using a custom neural network consisting of 1D CNN layers. F1-scores for stressed and unstressed pixels are 0.989 and 0.995 respectively.\n- The work resulted in a peer-reviewed journal paper titled [**\"Drought stress prediction and propagation using time series modeling on multimodal plant image sequences\"**](https://doi.org/10.3389/fpls.2023.1003150), Das Choudhury S, Saha S, Samal A, Mazis A and Awada T (2023) in Frontiers in Plant Science."
+
+        [[params.internships.list]]
+        position = "under Prof. Amit Konar, INAE Fellow"
+        dates = "May. - Jul., 2019"
+        company = "Summer Internship "
+        location = "AI Lab, Jadavpur University"
+        details = "- The work includes programming a 6-DOF Robotic Arm from Kinova named JACO.\n- We are currently developing an obstacle avoidance and trajectory planning system for 3-DOF robotic arms based on a modified A* search algorithm in articulate co-ordinate system.\n- The robot is programmed using C# and the simulations are done on Matlab.\n- This internship is under the \"Mentoring of Engineering students by INAE Fellows\" Scheme offered by INAE for a duration of two months."
 
         [[params.internships.list]]
         position = "under Samik Basu, Soumya Pandit, Soma Barman (Mandal)"
         dates = "May. - Jul., 2018"
         company = "Summer Project on Smart Health Monitoring System"
         location = "IRPE, CU"
-        details = "- A smart IoT-based health monitoring system was implemented which uses noninvasive sensors to read health parameters, displays it on an LCD and sends the data to the cloud to store it securely.\n- Implemented using Arduino UNO, different sensors, Wi-Fi module and Thingspeak IoT platform.\n- The work resulted in a paper titled [**\"Smart Health Monitoring System for Temperature, Blood Oxygen Saturation, and Heart Rate Sensing with Embedded Processing and Transmission Using IoT Platform\"**](https://doi.org/10.1007/978-981-13-9042-5_8), Samik Basu, Sinjoy Saha, Soumya Pandit and Soma Barman (Mandal), which was presented at the International Conference on Computational Intelligence in Pattern Recognition (CIPR), 2019, IIEST Shibpur."
+        details = "- A smart IoT-based health monitoring system was implemented which uses noninvasive sensors to read health parameters, displays it on an LCD and sends the data to the cloud to store it securely.\n- Implemented using Arduino UNO, different sensors, Wi-Fi module and Thingspeak IoT platform.\n- The work resulted in a conference paper titled [**\"Smart Health Monitoring System for Temperature, Blood Oxygen Saturation, and Heart Rate Sensing with Embedded Processing and Transmission Using IoT Platform\"**](https://doi.org/10.1007/978-981-13-9042-5_8), Samik Basu, Sinjoy Saha, Soumya Pandit and Soma Barman (Mandal) (2020), which was presented at the International Conference on Computational Intelligence in Pattern Recognition (CIPR), 2019, IIEST Shibpur."
 
     # Publication section
     [params.publications]
