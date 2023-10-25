@@ -98,15 +98,15 @@ disable404 = true
 
         [[params.skill.list]]
         skillname = "Languages"
-        skill = "Python, C/C++, Java, MATLAB, JavaScript, HTML & CSS"
+        skill = "Python, C/C++, Java, SQL, MatLab, HTML/CSS, JavaScript"
         
         [[params.skill.list]]
-        skillname = "Libraries"
-        skill = "OpenCV, TensorFlow, keras, PyTorch, spaCy, nltk, scikit-learn, Django, Flask, fastAPI, BeautifulSoup"
+        skillname = "Libraries/Frameworks"
+        skill = "TensorFlow/Keras, PyTorch, ONNX, Scikit-learn, Django/fastAPI/Flask, Pandas, NumPy, SciPy, Matplotlib, BeautifulSoup, Bootstrap"
 
         [[params.skill.list]]
-        skillname = "Other Tools"
-        skill = "Tableau, Power BI, Linux, Arduino, Latex, VS Code, Git, Heroku"
+        skillname = "Tools"
+        skill = "Tableau/Power BI, Linux, SQL Server, MongoDB, MilvusDB, VS Code, Git/GitHub, Heroku, LATEX, Arduino"
 
     # Languages section
     [params.language]
