@@ -162,7 +162,7 @@ disable404 = true
         dates = "Nov. 2020 - Sep. 2021"
         company = "Cognizant Technolgy Solutions"
         location = "Kolkata, India"
-        details = "Trained in the following:\nJava, Selenium, SQL, HTML5, CSS, JavaScript, RESTApi, Jira, GitLab"
+        details = "- Developed and executed automated test scripts using Java, Selenium, REST API, HTML, CSS, and JavaScript to ensure the quality of API and web applications. Contributed to the development of the automation testing framework. \n- Trained in a variety of automation testing tools and methodologies, including Selenium, TestNG, and JUnit. \n- Actively participated in the test development process for web and mobile applications, including requirements analysis, test case design, and test execution. Worked closely with developers to identify and resolve defects."
 
     # Interships section
     [params.internships]
