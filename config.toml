@@ -73,6 +73,16 @@ disable404 = true
         url = "//twitter.com/sinjoysaha"
         title = "@SinjoySaha"
 
+    # Download section
+    [params.download]
+        enable = true
+
+        [[params.download.list]]
+        class = "cv"
+        icon = "fa-download"
+        filename = "SinjoySahaCV_Nov2023_Online.pdf"
+        title = "CV [Download]"
+
     # Education section
     [params.education]
         enable = true
