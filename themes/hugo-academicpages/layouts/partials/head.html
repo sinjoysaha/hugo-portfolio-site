@@ -1,0 +1,32 @@
+
+{{- /* Title */}}
+<title>{{ if .IsHome }}{{ else }}{{ if .Title }}{{ .Title }} | {{ end }}{{ end }}{{ site.Title }}</title>
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<meta name="description" content="{{ .Site.Params.description }}">
+<meta name="author" content="{{ .Site.Params.author }}">
+{{- if hugo.IsProduction | or (eq site.Params.env "production") | and (ne .Params.robotsNoIndex true) }}
+<meta name="robots" content="index, follow">
+{{- else }}
+<meta name="robots" content="noindex, nofollow">
+{{- end }}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<!-- Global CSS -->
+
+<!-- Plugins CSS -->
+<!-- <link rel="stylesheet" href="{{ .Site.BaseURL }}assets/plugins/font-awesome/css/font-awesome.css"> -->
+
+<!-- AcademicPages SASS/SCSS -->
+<!-- {{ $opts := dict "transpiler" "libsass" "targetPath" "assets/css/style.css" }}
+{{ with resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint "sha256" }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity | safeHTMLAttr }}" crossorigin="anonymous">
+{{ end }} -->
+{{ $css := resources.Get "sass/main.scss" | toCSS $opts | minify | fingerprint "sha256" }}
+{{ $cssFingerprint := $css | resources.Fingerprint }} 
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="" crossorigin="anonymous">
+<!-- Theme CSS -->
+<!-- <link rel="stylesheet" type="text/css" href="css/main.css"> -->

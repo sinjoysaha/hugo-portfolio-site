@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    {{- partial "head.html" . -}}
+    <body>
+        {{- partial "header.html" . -}}
+        {{- partial "masthead.html" . -}}
+
+        {{- block "main" . }}{{- end }}
+        <div class="page__footer">
+            <footer>
+                {{- partial "footer.html" . -}}
+            </footer>
+        </div>
+        
+        {{- partial "scripts.html" . -}}
+        
+    </body>
+</html>

@@ -1,326 +1,92 @@
-# Page settings
+baseURL = ''
+languageCode = 'en-us'
+title = 'Sinjoy Saha'
+theme = "hugo-academicpages"
 
-baseurl = "https://sinjoysaha.github.io/"
-languageCode = "en-us"
-title = "Sinjoy Saha"
-theme = "hugo-orbit-theme"
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
 
-# Do not build files for websites. Need them? Set to false
-disableRSS = true
-disableSitemap = true
-disable404 = true
+[markup.tableOfContents]
+    startLevel = 1
+    endLevel = 6
+
+[[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience/"
+    weight = 10
+    
+[[menu.main]]
+    identifier = "publications"
+    name = "Publications"
+    url = "/publications/"
+    weight = 20
+
+[[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 30
+
+[[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
+    weight = 40
+
+[[menu.main]]
+  identifier = "cv"
+  name = "CV"
+  url = "/assets/Sinjoy_Saha_CV.pdf"
+  target = "_blank"
+  weight = 50
+
 
 [params]
-
-# Meta
-    description = "Resume and Portfolio landing page for Sinjoy Saha"
-    author = "Sinjoy Saha"
-
-# Theme styles
-
-    # The original template comes with 6 colour schemes. You may choose styles below.
-    # "styles.css", "styles-2.css", "styles-3.css", "styles-4.css", "styles-5.css", "styles-6.css"
-    # are available. Also the source LESS files are included so
-    # it’s quick and easy to change the styling and colour scheme.
-
-    styles = "styles-6_edited.css"
-
-# Sidebar sections
-
-    # Profile section
-    [params.profile]
-        name = "Sinjoy Saha"
-        tagline = "Senior Research Engineer at Siemens Healthineers"
-        avatar = "profilePic.jpg"
-
-    # Contact section
-    [params.contact]
-        enable = true
-
-        [[params.contact.list]]
-        class = "email"
-        icon = "fa-envelope"
-        url = "mailto: sinjoysaha555@gmail.com"
-        title = "sinjoysaha555 [AT] gmail.com"
-
-        # [[params.contact.list]]
-        # class = "phone"
-        # icon = "fa-phone"
-        # url = "tel:+1234567890"
-        # title = "+1234567890"
-
-        [[params.contact.list]]
-        class = "website"
-        icon = "fa-graduation-cap"
-        url = "//scholar.google.com/citations?hl=en&user=xNXqCc0AAAAJ"
-        title = "Google Scholar"
-
-        [[params.contact.list]]
-        class = "linkedin"
-        icon = "fa-linkedin"
-        url = "//linkedin.com/in/sinjoysaha"
-        title = "LinkedIn Profile"
-
-        [[params.contact.list]]
-        class = "github"
-        icon = "fa-github"
-        url = "//github.com/sinjoysaha"
-        title = "GitHub ID"
-
-        [[params.contact.list]]
-        class = "twitter"
-        icon = "fa-twitter"
-        url = "//twitter.com/sinjoysaha"
-        title = "@SinjoySaha"
-
-    # Download section
-    [params.download]
-        enable = true
-
-        [[params.download.list]]
-        class = "cv"
-        icon = "fa-download"
-        filename = "SinjoySahaCV_Nov2023_Online.pdf"
-        title = "CV [Download]"
-
-    # Education section
-    [params.education]
-        enable = true
-        title = "Education"
-
-        [[params.education.list]]
-        degree = "B.Tech in Electronics and Communication Engineering"
-        college = "Institute of Radio Physics and Electronics, University of Calcutta"
-        dates = "2016 - 2020"
-
-    # Interests section
-    [params.interests]
-        enable = true
-        title = "Research Interests"
-
-        [[params.interests.list]]
-        interest = "Machine Learning, NLP, Computer Vision, Robotics"
-
-    # Languages section
-    [params.skill]
-        enable = true
-        title = "Skills"
-
-        [[params.skill.list]]
-        skillname = "Languages"
-        skill = "Python, C/C++, Java, SQL, MatLab, HTML/CSS, JavaScript"
-        
-        [[params.skill.list]]
-        skillname = "Libraries/Frameworks"
-        skill = "TensorFlow/Keras, PyTorch, ONNX, Scikit-learn, Django/fastAPI/Flask, Pandas, NumPy, SciPy, Matplotlib, BeautifulSoup, Bootstrap"
-
-        [[params.skill.list]]
-        skillname = "Tools"
-        skill = "Tableau/Power BI, Linux, SQL Server, MongoDB, MilvusDB, VS Code, Git/GitHub, Heroku, LATEX, Arduino"
-
-    # Languages section
-    [params.language]
-        enable = false
-        title = "Languages"
-
-        [[params.language.list]]
-        language = "English"
-        level = "Native"
-
-        [[params.language.list]]
-        language = "French"
-        level = "Professional"
-
-        [[params.language.list]]
-        language = "Russian"
-        level = "Professional"
-
-# Main body sections
-
-    # You may use markdown in summary, details and intro fields. But don't overdose, it's resume!:)
-
-    # Summary section
-    [params.summary]
-        enable = true
-        icon = "fa-user"
-        title = "About Me"
-        summary = "Skilled data scientist with a total of 3 years of work experience and a proven track record of success in developing innovative solutions for complex problems in the healthcare industry. As a part of the Data Analytics team at Siemens Healthineers, made significant contributions to the field of Molecular Imaging, not only in image processing but also in natural language understanding in service analytics. Interned at multiple research universities and labs on topics including robotics, hyperspectral imaging, and federated learning and published papers in reputed conferences and journals."
-
-    # \n- Successfully filed a patent for developing a method for automated grading of SPECT Gamma Camera QC images. \n- Developed a fast semantic segmentation pipeline for calculating tumor-stroma ratio (TSR) for breast cancer prognosis, leveraging ONNX, pruning, quantization, normalization, and background separation.  \n- Developed an unsupervised topic modeling method for PET/SPECT service tickets, insights from which led to the redesign of the autoQC sub-component in SPECT. \n- Automated clustering of domain-relevant words into a thesaurus to improve the baseline FT SQL search of service tickets.  \n- Contributed to major productivity improvements by developing an end-to-end generalized NLP pipeline for extracting Cause and Action tags from service tickets. \n- Led the development of a custom backend API to migrate from full-text SQL search to LLM-based semantic search, leading to annual cost savings. \n- Played a key role in the conceptualization of an LLM-based Unified Search for the information silos and various tools developed at MI.\n Engaged in model design, training, and validation in image processing and NLP, creating data annotation and cleaning pipelines, development and maintenance of APIs and analytic tools, and creating dashboards for ease of data consumption and visualization. Having worn multiple hats, he seeks to continue research and contribute as a key expert in significantly improving efficiency and performance in multi-modal domains of computer vision and natural language.
-
-    # Experiences section
-    [params.experiences]
-        enable = true
-        icon = "fa-briefcase"
-        title = "Work Experiences"
-
-        [[params.jobs.list]]
-        position = "Senior Research Engineer"
-        dates = "Mar. 2023 - Present"
-        company = "Siemens Healthineers"
-        location = "Bangalore, India"
-        details = "- Developed a semantic segmentation pipeline for calculating tumor-stroma ratio (TSR) of histopathological whole slide images (WSI) for breast cancer prognosis based on DeepLabV3+ with a ResNet50 backbone. Optimized pipeline using ONNX, network pruning, mixed-precision quantization, color normalization, and background separation, enabling fast and accurate inference on consumer GPU. Achieved Dice co-efficient of 0.85 and IoU of 0.63. Collaborating hospital partners validated model accuracy and performance on real-world WSIs, leading to further research on other prognostic factors for breast cancer. \n- Led a team to migrate the flagship search and summarization service analytics tool for Molecular Imaging from full-text SQL search and Tableau to a language model-based semantic search. Developed custom backend API using Python, BERT, Milvus VectorDB, and fastAPI, and deployed on AWS cloud to be coupled with any front-end UI, contributing to savings of $20,000 per annum. Successful demos in Germany and the US led to the onboarding of new modalities. \n- Developed an unsupervised topic modeling method based on BERT and hierarchical DBSCAN and created a Power BI dashboard for PET/SPECT service tickets to identify semantic and domain-relevant failure modes. Insights generated from the Top Failure Modes model led to the redesign of the autoQC sub-component in SPECT.  \n\n  **Skills**: Keras · ONNX · Convolutional Neural Networks (CNN) · Unsupervised Learning · REST APIs · Microsoft Power BI · Natural Language Processing (NLP)"
-
-        [[params.jobs.list]]
-        position = "Research Engineer"
-        dates = "Dec. 2021 - Feb. 2023"
-        company = ""
-        details = "- Developed a novel set of image features for a machine learning classification model and an unsupervised ROI-agnostic artifact segmentation model for automated grading of SPECT Gamma Camera QC images. Improved F1-score from 0.45 to 0.65 compared to baseline uniformity metrics. The work resulted in an invention disclosure, leading to the successful patent filing for the automated grading algorithm. \n- Developed an unsupervised method based on Word2Vec embeddings and DBSCAN for clustering domain-relevant words into a thesaurus to significantly improve the baseline full-text SQL search of the service analytics tool for historical PET/SPECT service notifications. Eliminated the need for manual effort in creating domain-relevant thesaurus and increased cluster count from 15 to 346, thus aiding service engineers with more accurate and relevant search results. \n- Developed an end-to-end information extraction pipeline for PET/SPECT service tickets using the roBERTa model and NER, enhancing search results by extracting cause, action, and verification tags, thus improving granularity, searchability, and readability. Increased ticket coverage from 14% to 45% compared to the earlier POS tagging model.   \n\n  **Skills**: Natural Language Processing (NLP) · Image Processing · Machine Learning · Deep Learning · Python (Programming Language)"
-
-        [[params.jobs.list]]
-        position = "Programmer Analyst Trainee"
-        dates = "Nov. 2020 - Sep. 2021"
-        company = "Cognizant Technolgy Solutions"
-        location = "Kolkata, India"
-        details = "- Developed and executed automated test scripts using Java, Selenium, REST API, HTML, CSS, and JavaScript to ensure the quality of API and web applications. Contributed to the development of the automation testing framework. \n- Trained in a variety of automation testing tools and methodologies, including Selenium, TestNG, and JUnit. \n- Actively participated in the test development process for web and mobile applications, including requirements analysis, test case design, and test execution. Worked closely with developers to identify and resolve defects."
-
-    # Interships section
-    [params.internships]
-        enable = true
-        icon = "fa-graduation-cap"
-        title = "Internships"
-
-        [[params.internships.list]]
-        position = "under Dr. Rituparna Saha, Prof. Sudip Misra, IIT Kgp"
-        dates = "Jul. - Dec., 2021"
-        company = "Research Internship"
-        location = "Sensordrops Networks Pvt. Ltd, IIT Kharagpur"
-        details = "- Introduced a novel algorithm for Federated Learning in non-IID datasets based on K-Means clustering of clients. Our algorithm surpassed the accuracy of Federated Averaging (FedAvg) on non-IID MNIST dataset.\n- The work motivated a journal paper which is currently under review."
-
-        [[params.internships.list]]
-        position = "under Dr. Sruti Das Choudhary, Prof. Ashok Samal, UNL"
-        dates = "Jul. - Dec., 2021"
-        company = "Research Internship"
-        location = "Plant Vision Lab, University of Nebraska, Lincoln"
-        details = "- Temporal propagation of stress in drought affected cotton plants based on hyperspectral images capturing the growth of plants. Analysis of the reflection coefficients is performed using a custom neural network consisting of 1D CNN layers. F1-scores for stressed and unstressed pixels are 0.989 and 0.995 respectively.\n- The work resulted in a peer-reviewed journal paper titled [**\"Drought stress prediction and propagation using time series modeling on multimodal plant image sequences\"**](https://doi.org/10.3389/fpls.2023.1003150), Das Choudhury S, Saha S, Samal A, Mazis A and Awada T (2023) in Frontiers in Plant Science."
-
-        [[params.internships.list]]
-        position = "under Prof. Amit Konar, INAE Fellow"
-        dates = "May. - Jul., 2019"
-        company = "Summer Internship "
-        location = "AI Lab, Jadavpur University"
-        details = "- The work includes programming a 6-DOF Robotic Arm from Kinova named JACO.\n- We are currently developing an obstacle avoidance and trajectory planning system for 3-DOF robotic arms based on a modified A* search algorithm in articulate co-ordinate system.\n- The robot is programmed using C# and the simulations are done on Matlab.\n- This internship is under the \"Mentoring of Engineering students by INAE Fellows\" Scheme offered by INAE for a duration of two months."
-
-        [[params.internships.list]]
-        position = "under Samik Basu, Soumya Pandit, Soma Barman (Mandal)"
-        dates = "May. - Jul., 2018"
-        company = "Summer Project on Smart Health Monitoring System"
-        location = "IRPE, CU"
-        details = "- A smart IoT-based health monitoring system was implemented which uses noninvasive sensors to read health parameters, displays it on an LCD and sends the data to the cloud to store it securely.\n- Implemented using Arduino UNO, different sensors, Wi-Fi module and Thingspeak IoT platform.\n- The work resulted in a conference paper titled [**\"Smart Health Monitoring System for Temperature, Blood Oxygen Saturation, and Heart Rate Sensing with Embedded Processing and Transmission Using IoT Platform\"**](https://doi.org/10.1007/978-981-13-9042-5_8), Samik Basu, Sinjoy Saha, Soumya Pandit and Soma Barman (Mandal) (2020), which was presented at the International Conference on Computational Intelligence in Pattern Recognition (CIPR), 2019, IIEST Shibpur."
-
-    # Publication section
-    [params.publications]
-        enable = true
-        icon = "fa-newspaper-o"
-        title = "Publications"
-        intro = ""
-
-        [[params.publications.list]]
-        title = ""
-        url = "https://doi.org/10.3389/fpls.2023.1003150"
-        tagline = "Das Choudhury S, Saha S, Samal A, Mazis A and Awada T (2023) [**Drought stress prediction and propagation using time series modeling on multimodal plant image sequences.**](https://doi.org/10.3389/fpls.2023.1003150) Front. Plant Sci. 14:1003150. doi: 10.3389/fpls.2023.1003150"
-
-        [[params.publications.list]]
-        title = ""
-        url = "https://doi.org/10.1007/978-981-13-9042-5_8"
-        tagline = "Basu, S., Saha, S., Pandit, S., Barman (Mandal), S. (2020). [**Smart Health Monitoring System for Temperature, Blood Oxygen Saturation, and Heart Rate Sensing with Embedded Processing and Transmission Using IoT Platform.**](https://doi.org/10.1007/978-981-13-9042-5_8) In: Das, A., Nayak, J., Naik, B., Pati, S., Pelusi, D. (eds) Computational Intelligence in Pattern Recognition. Advances in Intelligent Systems and Computing, vol 999. Springer, Singapore. https://doi.org/10.1007/978-981-13-9042-5_8"
-
-
-    # Projects section
-    [params.projects]
-        enable = true
-        icon = "fa-rocket"
-        title = "Projects"
-        intro = "**Some of my academic and weekend side projects** (with links). Please have a look at my GitHub profiles for more repos."
-        
-
-        [[params.projects.list]]
-        title = "Quadrone, Cognizance (Mar. 2018)"
-        url = "https://certi.cognizance.org.in/certificate/754fe92cf99d881"
-        tagline = "- Participated in the national technological fest of **IIT, Roorkee** with a team of four members.\n- The flight controller of a **remote-controlled quadcopter** was implemented using Arduino UNO, MPU6050 and other off-the-shelf components. Flysky CT6B 2.4GHz 6CH Transmitter was used as the radio controller.\n- Learnt about quadcopters including PID controllers, radio communication and embedded processing."
-
-        [[params.projects.list]]
-        title = "Brain Tumor Segmentation from MRI using PSPNet"
-        url = "https://www.kaggle.com/sinjoysaha/pspnet-for-brain-mri"
-        tagline = "Motivation was to show the efficacy of **PSPNet** using **Keras** for the segmentation of **brain tumor** from MRI data. IoU of **0.552** and Dice coefficient of **0.66** were achieved."
-
-        [[params.projects.list]]
-        title = "Cell Nuclei Image Segmentation using U-Net"
-        url = "https://www.kaggle.com/sinjoysaha/segmentation-with-u-net"
-        tagline = "Cell nuclei images and their corresponding ground truth masks were used to train a **U-Net** like model and an acccuracy of **95.17%** was achieved."
-
-        [[params.projects.list]]
-        title = "Sentiment Analysis of Amazon Book Reviews"
-        url = "https://github.com/sinjoysaha/Amazon-Reviews-NLP"
-        tagline = "A comparison of different ML models for classification of Amazon book reviews into positive and negative classes. **Linear SVM** performed the best. Further, **GridSearchCV** was used for hyperparameter tuning of Linear SVM."
-
-        [[params.projects.list]]
-        title = "Multi-Label Classiffication of American Sign Language using Attention based Transfer Learning on VGG16"
-        url = "https://www.kaggle.com/sinjoysaha/a-sign-lang-classffication-with-tl-attention"
-        tagline = "Hand sign images for **29 classes** were used to train a **VGG16 based Attention model** and an acccuracy of **84.5%** was achieved."
-
-        [[params.projects.list]]
-        title = "Used Car Price Prediction using Machine Learning"
-        url = "https://github.com/sinjoysaha/Car-Price-Prediction-ML-WebApp"
-        tagline = "After-market selling price of cars are predicted by training a **Random Forest Regressor** model on open CarDekho dataset. The model was deployed on **Heroku** using **Flask**. Heroku link is down due to shutdown of Heroku free tier."
-
-    # Achievements section
-    [params.achievements]
-        enable = true
-        icon = "fa-trophy"
-        title = "Achievements"
-
-        [[params.achievements.list]]
-        title = "Runners-up in SCM Hackathon, DX, Siemens Healthineers"
-        date = "Feb. 2023"
-        tagline = "Stood 2nd out of 44 participating teams from two countries (India and Slovakia) in the **24-hour Supply Chain Management Data Science Hackathon** organized by Diagnostics department within Siemens Healthineers."
-
-
-        [[params.achievements.list]]
-        title = "JBNSTS Senior Scholar"
-        date = "Dec. 2016"
-        tagline = "Qualified in the Jagadis Bose National Science Talent Search Examination. Received a monthly scholarship and annual book grant throughout undergraduate studies."
-
-        
-
-    # Skills section
-    [params.skills]
-        enable = false
-        icon = "fa-rocket"
-        title = "Skills & Proficiency"
-
-        [[params.skills.list]]
-        skill = "Python & Django"
-        level = "98%"
-                
-        [[params.skills.list]]
-        skill = "Javascript & jQuery"
-        level = "98%"
-
-        [[params.skills.list]]
-        skill = "Angular"
-        level = "95%"
-
-        [[params.skills.list]]
-        skill = "HTML5 & CSS"
-        level = "95%"
-
-        [[params.skills.list]]
-        skill = "Ruby on Rails"
-        level = "75%"
-
-        [[params.skills.list]]
-        skill = "Sketch & Photoshop"
-        level = "60%"
-
-    # Footer section
-
-    # The original template is released under the Creative Commons Attribution 3.0 License.
-    # Please keep the original attribution link when using for your own project.
-    # If you'd like to use the template without the attribution,
-    # you can check out other license options via template author's website: themes.3rdwavemedia.com
-    # 
-    # As for Hugo port you may rewrite the "Ported for..." line with setting your name below.
-
-    [params.footer]
-        copyright = "Sinjoy Saha"
+  follow_label = "Follow"
+  powered_by = "Powered by"
+
+  [params.author]
+    name = "Sinjoy Saha"
+    avatar = "profilePic.jpg"
+    bio = "Senior Research Engineer @ MI, Siemens Healthineers"
+    [params.author.details]
+      [[params.author.details.list]]
+      class = "location"
+      icon = "fa-map-marker"
+      title = "Kolkata, WB, India"
+
+    [params.author.contact]
+      [[params.author.contact.list]]
+      class = "email"
+      icon = "fa-envelope"
+      url = "mailto:sinjoysaha555@gmail.com"
+      title = "Email"
+
+    [params.author.social]
+      [[params.author.social.list]]
+      class = "googelscholar"
+      icon = "fas fa-graduation-cap"
+      url = "https://scholar.google.com/citations?user=xNXqCc0AAAAJ&hl=en"
+      title = "Google Scholar"
+
+      [[params.author.social.list]]
+      class = "linkedin"
+      icon = "fab fa-linkedin"
+      url = "https://linkedin.com/in/sinjoysaha"
+      title = "LinkedIn"
+
+      [[params.author.social.list]]
+      class = "twitter"
+      icon = "fab fa-twitter-square"
+      url = "https://twitter.com/sinjoysaha"
+      title = "Twitter"
+
+      [[params.author.social.list]]
+      class = "github"
+      icon = "fab fa-github"
+      url = "https://github.com/sinjoysaha"
+      title = "GitHub"
+
+    
+      

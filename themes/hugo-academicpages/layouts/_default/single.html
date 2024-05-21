@@ -1,0 +1,41 @@
+{{- define "main" }}
+    <div id="main" role="main">
+        {{ partial "sidebar.html" . }}
+
+        <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
+            <header>
+              {{ if .Params.title }}<h1 class="page__title" itemprop="headline">{{ .Params.title | markdownify }}</h1>{{ end }}
+              
+              {{ if .Params.modified }}
+                <p class="page__date"><strong><i class="fa fa-fw fa-calendar" aria-hidden="true"></i> {{ site.Params.date_label | default "Published:" }}</strong> <time datetime="{{ .Params.modified "%Y-%m-%d" }}">{{ .Params.modified "%B %d, %Y" }}</time></p>
+              {{ end }}
+              
+            </header>
+            <div class="page__inner-wrap">
+              <section class="page__content" itemprop="text">
+                {{if or (.Params.citation) (.Params.venue) (.Params.paperurl) (.Params.codeurl) (.Params.imgsrc) }}
+                  <p>
+                    {{ if .Params.citation }} {{ .Params.citation | markdownify }} </br> {{ end }}
+                    {{ if .Params.venue | markdownify }}
+                      <em>{{ .Params.venue | markdownify }}</em>{{ if .Params.date }}, {{ .Params.date.Year }} {{ end }} </br>
+                    {{ end }}
+                    {{ if .Params.paperurl }} <a href="{{ .Params.paperurl }}" target="_blank" class="btn">Paper</a> {{ end }}
+                    {{ if .Params.codeurl }} <a href="{{ .Params.codeurl }}" target="_blank" class="btn">Code</a> {{ end }}
+                    <div style="margin: auto 10px; text-align: center">
+                      {{ if .Params.imgsrc }}<img src="{{ .Params.imgsrc | absURL }}" alt="Image for {{ .Title }}" style="max-height: 480px;"> {{ end }}
+                    </div>
+                  </p>
+                {{ end }}
+                {{ .Content }}
+                {{ if .Params.link }}<div><a href="{{ .Params.link }}" class="btn">{{ site.Params.ext_link_label | default "Direct Link" }}</a></div>{{ end }}
+              </section>
+        
+              <footer class="page__meta">
+                {{ if site.Params.meta_label }}
+                  <h4 class="page__meta-title">{{ site.Params.meta_label }}</h4>
+                {{ end }}
+              </footer>
+            </div>
+        </article>
+    </div>
+{{- end }}
